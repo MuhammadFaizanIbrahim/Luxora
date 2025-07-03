@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  @keyframes textSlideUp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100%);
+    }
+    51% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textSlideDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+    51% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  
+
+  @keyframes slideUpOnly {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100%);
+    }
+    51% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDownOnly {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+    51% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+@keyframes slideUpOnly {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownOnly {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+@keyframes spin-y {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-spin-y {
+  animation: spin-y 2s linear infinite;
+  transform-style: preserve-3d;
+  /* backface-visibility: hidden; */
+}
+
+.overlay {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.box-animator {
+  position: absolute;
+}
+
+.box-line {
+  position: absolute;
+  background-color: white;
+}
+
+.top-line, .bottom-line {
+  height: 2px;
+  width: 0%;
+}
+
+.left-line, .right-line {
+  width: 2px;
+  height: 0%;
+}
+
+.top-line {
+  top: 0;
+  left: 0;
+}
+
+.right-line {
+  top: 0;
+  right: 0;
+}
+
+.bottom-line {
+  bottom: 0;
+  right: 0;
+}
+
+.left-line {
+  bottom: 0;
+  left: 0;
+}
